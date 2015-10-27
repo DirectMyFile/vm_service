@@ -516,8 +516,7 @@ abstract class VM extends ServiceObjectOwner {
 
   // TODO(johnmccutchan): Ensure that isolates do not end up in _cache.
   Map<String,ServiceObject> _cache = new Map<String,ServiceObject>();
-  final ObservableMap<String,Isolate> _isolateCache =
-  new ObservableMap<String,Isolate>();
+  final ObservableMap<String,Isolate> _isolateCache = new ObservableMap<String, Isolate>();
 
   // The list of live isolates, ordered by isolate start time.
   final ObservableList<Isolate> isolates = new ObservableList<Isolate>();
@@ -527,7 +526,7 @@ abstract class VM extends ServiceObjectOwner {
   @observable int architectureBits;
   @observable bool assertsEnabled = false;
   @observable bool typeChecksEnabled = false;
-  @observable String pid = '';
+  @observable int pid = -1;
   @observable DateTime startTime;
   @observable DateTime refreshTime;
   @observable Duration get upTime =>
