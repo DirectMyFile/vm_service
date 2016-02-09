@@ -9,7 +9,6 @@ import 'package:logging/logging.dart';
 import 'cpu_profile.dart';
 import 'object_graph.dart';
 import 'tracer.dart';
-import 'base64.dart';
 import 'package:observe/observe.dart';
 
 part 'src/service/object.dart';

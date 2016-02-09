@@ -6,6 +6,7 @@ main(List<String> args) async {
   VM vm = await socketVm.load();
   print("Dart VM Version: ${vm.version}");
   vm.isolates.forEach((Isolate isolate) async {
+    await isolate.load();
     print("Isolate ${isolate.name}:");
     print("  New Generation: ${isolate.newSpace.collections}");
     print("    Garbage Collections: ${isolate.newSpace.collections}");
